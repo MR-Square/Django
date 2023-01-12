@@ -1,0 +1,39 @@
+Vid Title: URL & VIEWS
+
+1 - How to use HttpResponse
+    To use HttpResponse functionality import this first.
+    from django.http import HttpResponse
+    Now you can use HttpResponse() method ro run any file or funciton.
+
+
+2 - How to create url for different pages?
+    To add url pattern for different pages we use "path()" function in urlpatterns list as an element.
+    e.g:path('', Home, name='home-page'),
+        path('about/',About),
+        Home and About are the name of function which will be run when urser will enter the corresponding pattern in search bar.
+
+
+3 - We have defined three functions in accounts/views.py file.
+
+
+4 - we have also created one file named urls.py in accounts folder. Then we will import path and make one list named as urlpatterns
+        import line:
+        from django.urls import path
+        creating list:
+        urlpatterns = []
+    In this list we will create different path for different pages.
+
+
+5 - Now we will import views file in accounts/urls.py file then we will add path for all functions which we have defined
+    import:
+    from . import views
+    paths: this is just for example.
+    path('products/',views.products)
+
+6 - How to link app urls.py file with project urls.py file?
+      i) import this in project urls.py file:
+         from django.urls import include
+     ii) Then add the following path in list.
+         path('any pattern if you want',include('app_name.urls')),
+    iii) e.g:
+         path('',include('accounts.urls')),
