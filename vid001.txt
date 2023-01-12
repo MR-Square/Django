@@ -1,0 +1,27 @@
+1 - To install Django
+>>> pip install django.
+
+2.a - To check django is install or not
+>>> django-admin
+
+2.b - To check the django version
+>>> python -m django --version
+
+3 - To create a project
+>>> django-admin startproject [project name]
+
+4 - To run the project
+NOTE: first do the the project directory.
+>>> python manage.py runserver
+
+5 - What is app?
+If you can't explain what the file does in one sentence it needs to be its own app.
+
+6 - To create an app
+>>> python manage.py startapp [app name]
+
+7 - How to connect an app with the project?
+      i) Go to the folder which name is same as project name.
+     ii) The go to settings.py file.
+    iii) In "INSTALLED_APPS" add the app name in single quote as a list element.
+         e.g: 'accounts', (see in crm1/settings.py INSTALLED_APPS last element.)
