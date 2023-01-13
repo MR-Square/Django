@@ -14,3 +14,15 @@ Title : Templates & Inheritance
 3 - What is template inheritance?
     Creating a base file which contains all the common elements of pages of website and defines blocks that child templates can override
     We use template inheritance to achieve DRY(Don't Repeat Youself) method.
+
+4 - What is block in template inheritance?
+    block tag is a placeholder that will be replace by a block of code in a child file with the same name.
+    syntax:
+    For base file:
+    {% block block_name %}
+    {% endblock block_name %}
+    For child file:
+    {% block block_name %}
+    // contents
+    {% endblock block_name %}
+    NOTE: In {% endblock block_name %} block_name is optional.
