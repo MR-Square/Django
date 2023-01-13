@@ -12,3 +12,5 @@ Title : Templates & Inheritance
     : return render(request, 'file path')
 
 3 - What is template inheritance?
+    Creating a base file which contains all the common elements of pages of website and defines blocks that child templates can override
+    We use template inheritance to achieve DRY(Don't Repeat Youself) method.
