@@ -1,0 +1,14 @@
+Title : Templates & Inheritance
+
+1 - How to add our html and css files in project?
+    To link html & css files we need to make a folder in app folder named as "templates".
+    Then make a folder and named it as app name.
+    Then in in app_dir/templates_dir/app_dir you can create your html and css files.
+
+2 - How to use html & css files in views.py file.
+    In app_dir/views.py import the following
+    :from django.shortcuts import render
+    Then to use file return the following
+    : return render(request, 'file path')
+
+3 - What is template inheritance?
