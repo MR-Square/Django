@@ -35,3 +35,5 @@ Title : Templates & Inheritance
     e.g: {% extends 'accounts/main.html' %}
     Now add the content of child file in respective block tag.
     e.g: refer accounts/child1.html
+
+6 - What is the difference between extends tag and include tag?
