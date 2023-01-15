@@ -2,3 +2,20 @@ Title : Database Model and Admin Panel
 
 1 - What is migration?
     Migrations are Django’s way of propagating changes you make to your models (adding a field, deleting a model, etc.) into your database schema
+
+2 - How to apply/unapply migration?
+    migrate command is responsible for applying and unapplying migrations.
+    : python manage.py migrate
+
+3 - How to create super user?
+    To create a super user run the following command.
+    : python mange.py createsuperuser
+    It will ask you username,email(optional),password and confirm password.
+    Note: when you type password, it will not be shown.So don't get confused.
+
+4 - How to create another users?
+    Once you create superuser, now you can directly create users on admin page.
+    just go to admin page.
+    Click on "Add" button
+    Fill the data and save it.
+    User is created.
