@@ -2,3 +2,34 @@ Title : Static Files & Images
 
 1 - What is static folder?
     It is basically a folder we create and store things like CSS, Js and images and it basically lets us separate our code from python code and store any extra things in that particular folder.
+
+2 - Where can we create static folder?
+    In your project folder you can create a folder named as "static".
+    e.g: project_dir/static.
+    To store css,js files and images you can create different folders
+    e.g: project_dir/static/css.
+
+3 - After creating static folder, can we use it directly?
+    No we can't directly use this folder, we have to link it so that our project can read it
+    For that we will go to project_dir/same_project_name_dir/settings.py
+    At the bottom add the following:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR,'static')
+    ]
+
+4 - How to use css file which is present in static/css folder?
+    Add the following line in that file you want to link css file
+    {% load static %}
+    Now you can use value of href attribute of link tag as:
+    {% static '/css/css_file_name.css%}
+    e.g: {% static '/css/main.css%}
+
+5 - How can we use images present in static/img folder?
+    First add this in project_dir/same_project_name_dir/settings.py
+    :MEDIA_URL = '/img/'     (I think it is not compulsory)
+    Give the name as you have given to your folder which contains all the iamges.
+    I generally use img as a folder name to store all the images, so I have used img here.
+    Then load the static folder in the file where you want to use images.
+    : {% load static %}
+    Then use this where you want to add image.
+    : {% static 'img_path'%}
