@@ -1,0 +1,4 @@
+Title : Static Files & Images
+
+1 - What is static folder?
+    It is basically a folder we create and store things like CSS, Js and images and it basically lets us separate our code from python code and store any extra things in that particular folder.
