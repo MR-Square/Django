@@ -26,3 +26,12 @@ Title : Templates & Inheritance
     // contents
     {% endblock block_name %}
     NOTE: In {% endblock block_name %} block_name is optional.
+
+5 - How to use template inheritance?
+    To use template inheritance create a base file which contains all the common elements of site.
+    e.g: refer accounts/main.html
+    Then extend base file in child file.
+    : {% extends 'base_file_location' %}
+    e.g: {% extends 'accounts/main.html' %}
+    Now add the content of child file in respective block tag.
+    e.g: refer accounts/child1.html
