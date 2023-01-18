@@ -47,3 +47,12 @@ Title : Database Model and Admin Panel
     Once you create a new database table run the following command
     :python manage.py makemigrations
     :python manage.py migrate
+
+9 - How to register newly created table in admin panel?
+    Go to the admin.py file available in app folder
+    Import the class(table) which you have created.
+    Add this line:
+    admin.site.register(class name)
+    e.g:
+    from .models import Customer
+    admin.site.register(Customer)
