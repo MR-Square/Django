@@ -56,3 +56,24 @@ Title : Database Model and Admin Panel
     e.g:
     from .models import Customer
     admin.site.register(Customer)
+
+10 - How to change the name object with any column value?
+    Go to models.py file
+    define the following function in your class.
+    def __str__(self):
+        return self.attributeName
+    e.g:
+    def __str__(self):
+        return self.email
+
+11 - How to add drop-dowm list for a field?
+    First create a tuple.
+    e.g:
+    STATUS = (
+        ('Pending','Pending'),
+        ('Out for delivery','Out for delivery'),
+        ('Delivered','Delivered'),
+    )
+    Then set the value of "choices" argument as the tuple name.
+    e.g:
+    status = models.CharField(null=True,choices=STATUS)
