@@ -19,3 +19,31 @@ Title : Database Model and Admin Panel
     Click on "Add" button
     Fill the data and save it.
     User is created.
+
+5 - How to create a table in Django?
+    Go to models.py fiel
+    Create a class which will be considered as your database table.
+    Class name = Table name.
+    Class attributes = Table columns.
+    Class attributes values = Table columns datatypes
+
+6 - How to create a class for database table?
+    You can define a class as follow:
+    class ClassName(models.Model):
+
+7 - How to define columns of different datatypes?
+    example for defining string type column:
+    name = models.CharField(max_length=20)
+        Here maximum length of name column can be 20 only.
+
+    example for defining date type column:
+    date_created = models.DateTimeField()
+        Here maximum length of name column can be 20 only.
+        You can use "auto_now_add = True" argument for adding current date automatically.
+    If you allow any null values in any cell you can use the following argument:
+    null = True
+
+8 - How to add newly created table in project database?
+    Once you create a new database table run the following command
+    :python manage.py makemigrations
+    :python manage.py migrate
