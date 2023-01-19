@@ -1,2 +1,15 @@
 Title : Database Relationship
 
+1 - What is one to one relationship?
+
+2 - What is many to many relationship?
+
+3 - Why we use ForeignKey?
+    To define a many-to-one relationship, we use ForeignKey.
+
+3 - How to add ForeignKey?
+    class Order(models.Model):
+        cus = models.ForeignKey(Customer)
+    In this example Customer can be associated with many Order objects
+    on_delete tells what to do when a parent value is deleted
+
