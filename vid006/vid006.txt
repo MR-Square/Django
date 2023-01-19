@@ -13,3 +13,22 @@ Title : Database Relationship
     In this example Customer can be associated with many Order objects
     on_delete tells what to do when a parent value is deleted
 
+4 - What are the various options for on_delete?
+    a) CASCADE
+        delete the reference object will also delete the referred object
+        e.g:
+        A post has comments, when the Post is deleted, all the comments on that Post will automatically delete. We don't want a comment saving in the database when the associated Post is deleted.
+
+    b) PROTECT
+        It works just opposite of the CASCADE.
+        e.g:
+        All the comments on a post will remain save even if that post is deleted
+
+    c) SET_NULL
+        First we need to set the value of null argument as True then only we can use it.
+        When the referenced object is deleted, the referencing value will be updated as NULL.
+        e.g:
+        If a post is deleted, then all the comments will be set as NULL.
+
+    For more options refer the following link:
+    https://www.javatpoint.com/django-on_delete.
