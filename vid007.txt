@@ -28,3 +28,6 @@ Title: Database Model Query
     firstCustomer = Customer.objects.get(col_name = "value")
     e.g:
     firstCustomer = Customer.objects.get(name = "Mohd.Raza")
+
+You can refer the below link for more details:
+https://docs.djangoproject.com/en/4.1/topics/db/queries/
