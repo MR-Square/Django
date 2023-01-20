@@ -1,0 +1,9 @@
+Title: Database Model Query
+
+(NOTE: consider some tables -> Customer)
+
+1 - What is the general syntax for database Query?
+    querySet = ModelName.ModelObjectsAttribute.Method()
+    querySet is a variable to hold return value.
+    e.g: 
+    querySet = Customer.objects.all()
