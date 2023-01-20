@@ -7,3 +7,24 @@ Title: Database Model Query
     querySet is a variable to hold return value.
     e.g: 
     querySet = Customer.objects.all()
+
+2 - How can we return all the customers from customer table?
+    To return all the customers from customer table run the following command.
+    customersList = Customer.objects.all()
+
+3 - How can we return first Object of a table.
+    Use this command to return first object of a table.
+    firstCustomer = Customer.objects.first()
+    OR
+    customersList = Customer.objects.all()
+    firstCustomer = customersList.first()
+
+4 - How can we return last Object of a table.
+    Use this command to return first object of a table.
+    firstCustomer = Customer.objects.last()
+
+5 - How can we return a specific Object of a table.
+    Use this command to return first object of a table.
+    firstCustomer = Customer.objects.get(col_name = "value")
+    e.g:
+    firstCustomer = Customer.objects.get(name = "Mohd.Raza")
