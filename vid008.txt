@@ -9,3 +9,14 @@ Title : Rendering data to Templates
     def products(request):
     productsList = Products.objects.all()
     return render(request, 'accounts/products.html',{'products':productsList})
+
+2 - How can we use value of a variable in file?
+    To use value of a variable use double curly brackets.
+    e.g: 
+    {{ variable_name }}
+
+3 - How to Use "For loop" in django?
+    Syntax of for loop in django:
+    {% for i in variable %}
+    // code
+    {% endfor %}
