@@ -1,1 +1,11 @@
 Title : Rendering data to Templates
+
+1 - How does send any variable(present in views.py file) along with its values to html file?
+    Go to views.py file.
+    Then make a variable and set its value.
+    Now in render function after location pass a dictionary.
+    Note: key of the dictionary will be used as a variable in html file.
+    e.g:
+    def products(request):
+    productsList = Products.objects.all()
+    return render(request, 'accounts/products.html',{'products':productsList})
