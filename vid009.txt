@@ -1,2 +1,14 @@
 Title : Dynamic URL Routing & Templates
 
+1 - How to add object id(primary key) in the url to make it Dynamic?
+    To add object id in url use the following in your path function in urls.py file
+    /<str:pk>/
+    Then you need to give the pk as argument in respective function in views.py file.
+    e.g:
+    in urls.py file:
+    path('customer/<str:pk>/',views.customer),
+    in views.py file:
+    (here at the above url customer function will be call)
+    def customer(request,pk):
+        products = Product.objects.all()
+        return render(request, 'accounts/customer.html',{'products':products})
