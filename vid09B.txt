@@ -1,0 +1,8 @@
+Title : Dynamic URL Part 2
+
+1 - How to add link url path in django?
+    {% url 'object' object.attribute %}
+    object.attribute is optional.
+    e.g:
+    {% url 'customer' customer.id %}
+    <a href = "{% url 'customer' customer.id %}">Link</a>
