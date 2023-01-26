@@ -1,0 +1,12 @@
+Title : Create, Update and Delete (CRUD) with model forms
+
+(Now we created order_form.html file then we created forms.py)
+
+1 - What is model meta?
+    Model Meta is basically the inner class of your model class. It is basically used to change the behavior of your model fields. It’s completely optional to add a Meta class to your model.
+
+2 - How does the model meta use in our model?
+    We add meta class in our model to add model meta:
+    class className(models.Model):
+        class Meta:
+            options...
