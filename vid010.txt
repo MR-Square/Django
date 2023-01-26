@@ -28,7 +28,7 @@ Title : Create, Update and Delete (CRUD) with model forms
     For more options you can refer the following link:
     https://www.geeksforgeeks.org/meta-class-in-models-django/
 
-4 - Why do we use fields = '__all___' in form.py file?
+4 - Why do we use fields = '__all__' in form.py file?
     This is saying that go ahead and create a form with all of the fields present in that table. 
     If you want to spcify some of the fields of a model then use list
     e.g:
@@ -37,4 +37,64 @@ Title : Create, Update and Delete (CRUD) with model forms
 5 - What does redirect do?
     It is used to redirect from one page to another page.
 
+6 - How to perform create operation?
+    in views.py file we will create a function for creating new object(row in table).
+    Then we will create a class for form and we will inherit it from ModelForm class of django.forms
+    It will be easy for us to make the class in another file (forms.py)
+    e.g:
+    forms.py file:
+    from django.forms import ModelForm
+    from .models import Order
+    class OrderForm(ModelForm):
+        class Meta:
+            model  = Order
+            (Note: we are targetting Order model)
+            fields = '__all__'
+            (Note: form will contains all the fields present in the model.)
 
+    In views.py file:
+    def createOrder(request):
+        form = OrderForm()
+        context = {
+            'form':form
+        }
+
+        if request.method == 'POST':
+            form = OrderForm(request.POST)
+            (Note: request.POST contains data filled by user.)
+            if form.is_valid():
+                form.save()
+                return redirect('/')
+                # redirecting to the main page
+
+        return render(request,'accounts/order_form.html',context)
+
+7 - How does to perform Update operation?
+    You can create a function in views.py file for update any object values.
+    In views.py file:
+    def updateOrder(request,pk):
+        order = Order.objects.get(id=pk)
+        form = OrderForm(instance=order)
+        context = {
+            'form':form
+        }
+
+        if request.method == 'POST':
+            form = OrderForm(request.POST, instance=order)
+            if form.is_valid():
+                form.save()
+                return redirect('/')
+    
+        return render(request,'accounts/order_form.html',context)
+
+8 - How does to perform delete operation?
+    We can create a function in  views.py file.
+
+    def deleteOrder(request, pk):
+        order = Order.objects.get(id=pk)
+        if request.method == 'POST':
+            order.delete()
+            return redirect('/')
+        context = {
+        }
+        return render(request, 'accounts/delete.html',context) 
