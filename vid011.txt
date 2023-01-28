@@ -1,1 +1,7 @@
 Title : Inline Formsets
+
+1 - How does to fill any specific field of a form?
+    To fill any specific field of a form we use initial attribute
+    initial = {'field name' : value }
+    e.g: 
+    You can refer form = OrderForm(initial={'customer':customer}) in createOrder function in accounts/views.py file
