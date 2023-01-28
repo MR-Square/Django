@@ -5,3 +5,8 @@ Title : Inline Formsets
     initial = {'field name' : value }
     e.g: 
     You can refer form = OrderForm(initial={'customer':customer}) in createOrder function in accounts/views.py file
+
+2 - Why we use inline fomrset?
+    Django formset allows you to edit a collection of the same forms on the same page.
+    It basically allows you to bulk edit a collection of objects at the same time.
+    You can search more about "inlineformset_factory in django".
