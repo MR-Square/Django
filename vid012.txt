@@ -3,3 +3,6 @@ Title : Filter Form Table Search
 1 - How does to use django-filter?
     To use filter search funcitonality we need to install it.
     pip install django-filter
+    Now we need to add about it in settings.py file as a element of INSTALLED_APP
+    'django_filters',
+    Then in our app folder we can create a .py file such as filters.py.
